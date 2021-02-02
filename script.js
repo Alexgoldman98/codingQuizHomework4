@@ -92,7 +92,7 @@ function timer(){
         clearInterval(myTimer);
          countdown.innerHTML = "Quiz Over";
         endQuiz()
-      } else if(questionNum >= 4){
+      } else if(questionNum >= questions.length){
         clearInterval(myTimer);
         countdown.innerHTML = "Quiz Over";
         endQuiz()
