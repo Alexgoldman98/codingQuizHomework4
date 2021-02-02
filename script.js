@@ -51,19 +51,17 @@ function startQuiz(){
     timer()
    
 }
-//to show the questions 
-function getQuestions(){
+  //to show the questions 
+  function getQuestions(){
     var question = questions[questionNum]
-    var questionEl = document.querySelector('#quizPage')
+    var questionInner = document.querySelector('#quizPage')
     
-    // display question
-    questionEl.innerHTML = `
-        <div class="alert"><h3>${question.question}</h3>
-        `
-    // loop through and show each answer as a button
+    questionInner.innerHTML = 
+      `<div class="alert"><h3>${question.question}</h3>`
+        
         for( var i=0; i < question.answers.length; i++ ){
         var answer = question.answers[i]
-        questionEl.innerHTML += `
+        questionInner.innerHTML += `
         <button onClick="selectAnswer('${answer}')" class="col container m-2 btn btn-primary btn-group-vertical w-sm-75 role = 'group">${answer}</button>
         `
     } 
